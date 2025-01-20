@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrities I</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+        .question {
+            margin-bottom: 30px;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin: 10px 0;
+        }
+        .options button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .options button:hover {
+            background: #0056b3;
+        }
+        .feedback {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .signature {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Celebrities I</h1>
+
+        <!-- Question 1 -->
+        <div class="question">
+            <p>1. A Hollywood actress who lived from 1926 to 1962:</p>
+            <ul class="options" id="q1">
+                <li><button onclick="checkAnswer(1, 'a')">a) Marilyn Monroe</button></li>
+                <li><button onclick="checkAnswer(1, 'b')">b) Lady Gaga</button></li>
+                <li><button onclick="checkAnswer(1, 'c')">c) Rihanna</button></li>
+            </ul>
+            <p id="feedback1" class="feedback"></p>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <p>2. A famous rock and roll singer known for his significant impact on music:</p>
+            <ul class="options" id="q2">
+                <li><button onclick="checkAnswer(2, 'a')">a) Elvis Presley</button></li>
+                <li><button onclick="checkAnswer(2, 'b')">b) Michael Jackson</button></li>
+                <li><button onclick="checkAnswer(2, 'c')">c) Johnny Depp</button></li>
+            </ul>
+            <p id="feedback2" class="feedback"></p>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <p>3. The King of Pop known for his groundbreaking music and performances:</p>
+            <ul class="options" id="q3">
+                <li><button onclick="checkAnswer(3, 'a')">a) Michael Jackson</button></li>
+                <li><button onclick="checkAnswer(3, 'b')">b) Robert Downey Jr.</button></li>
+                <li><button onclick="checkAnswer(3, 'c')">c) Will Smith</button></li>
+            </ul>
+            <p id="feedback3" class="feedback"></p>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <p>4. A pop icon known for her influential music and fashion style:</p>
+            <ul class="options" id="q4">
+                <li><button onclick="checkAnswer(4, 'a')">a) Madonna</button></li>
+                <li><button onclick="checkAnswer(4, 'b')">b) Lindsay Lohan</button></li>
+                <li><button onclick="checkAnswer(4, 'c')">c) Katy Perry</button></li>
+            </ul>
+            <p id="feedback4" class="feedback"></p>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <p>5. A legendary singer with a powerful voice and numerous hit songs:</p>
+            <ul class="options" id="q5">
+                <li><button onclick="checkAnswer(5, 'a')">a) Taylor Swift</button></li>
+                <li><button onclick="checkAnswer(5, 'b')">b) Whitney Houston</button></li>
+                <li><button onclick="checkAnswer(5, 'c')">c) Jennifer Lopez</button></li>
+            </ul>
+            <p id="feedback5" class="feedback"></p>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <p>6. A renowned actor known for his roles in blockbuster films:</p>
+            <ul class="options" id="q6">
+                <li><button onclick="checkAnswer(6, 'a')">a) Tom Cruise</button></li>
+                <li><button onclick="checkAnswer(6, 'b')">b) Brad Pitt</button></li>
+                <li><button onclick="checkAnswer(6, 'c')">c) Leonardo DiCaprio</button></li>
+            </ul>
+            <p id="feedback6" class="feedback"></p>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <p>7. An influential talk show host, actress, and media mogul:</p>
+            <ul class="options" id="q7">
+                <li><button onclick="checkAnswer(7, 'a')">a) Oprah Winfrey</button></li>
+                <li><button onclick="checkAnswer(7, 'b')">b) Angelina Jolie</button></li>
+                <li><button onclick="checkAnswer(7, 'c')">c) Lady Gaga</button></li>
+            </ul>
+            <p id="feedback7" class="feedback"></p>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <p>8. A superstar singer and performer known for her powerful vocals and stage presence:</p>
+            <ul class="options" id="q8">
+                <li><button onclick="checkAnswer(8, 'a')">a) Beyoncé</button></li>
+                <li><button onclick="checkAnswer(8, 'b')">b) Avril Lavigne</button></li>
+                <li><button onclick="checkAnswer(8, 'c')">c) Ariana Grande</button></li>
+            </ul>
+            <p id="feedback8" class="feedback"></p>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <p>9. An acclaimed actor known for his versatile roles in film:</p>
+            <ul class="options" id="q9">
+                <li><button onclick="checkAnswer(9, 'a')">a) Denzel Washington</button></li>
+                <li><button onclick="checkAnswer(9, 'b')">b) Tom Welling</button></li>
+                <li><button onclick="checkAnswer(9, 'c')">c) Robert Downey Jr.</button></li>
+            </ul>
+            <p id="feedback9" class="feedback"></p>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <p>10. A popular singer-songwriter known for her storytelling in music:</p>
+            <ul class="options" id="q10">
+                <li><button onclick="checkAnswer(10, 'a')">a) Jennifer Lopez</button></li>
+                <li><button onclick="checkAnswer(10, 'b')">b) Rihanna</button></li>
+                <li><button onclick="checkAnswer(10, 'c')">c) Taylor Swift</button></li>
+            </ul>
+            <p id="feedback10" class="feedback"></p>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question">
+            <p>11. A versatile actor known for his eclectic roles in film:</p>
+            <ul class="options" id="q11">
+                <li><button onclick="checkAnswer(11, 'a')">a) Johnny Depp</button></li>
+                <li><button onclick="checkAnswer(11, 'b')">b) Tom Cruise</button></li>
+                <li><button onclick="checkAnswer(11, 'c')">c) Brad Pitt</button></li>
+            </ul>
+            <p id="feedback11" class="feedback"></p>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question">
+            <p>12. An acclaimed actress and humanitarian:</p>
+            <ul class="options" id="q12">
+                <li><button onclick="checkAnswer(12, 'a')">a) Angelina Jolie</button></li>
+                <li><button onclick="checkAnswer(12, 'b')">b) Lady Gaga</button></li>
+                <li><button onclick="checkAnswer(12, 'c')">c) Beyoncé</button></li>
+            </ul>
+            <p id="feedback12" class="feedback"></p>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question">
+            <p>13. An actor and musician known for his charismatic roles in film and TV:</p>
+            <ul class="options" id="q13">
+                <li><button onclick="checkAnswer(13, 'a')">a) Will Smith</button></li>
+                <li><button onclick="checkAnswer(13, 'b')">b) Robert Downey Jr.</button></li>
+                <li><button onclick="checkAnswer(13, 'c')">c) Michael Jackson</button></li>
+            </ul>
+            <p id="feedback13" class="feedback"></p>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question">
+            <p>14. A singer-songwriter and actress known for her unique style and powerful voice:</p>
+            <ul class="options" id="q14">
+                <li><button onclick="checkAnswer(14, 'a')">a) Lady Gaga</button></li>
+                <li><button onclick="checkAnswer(14, 'b')">b) Madonna</button></li>
+                <li><button onclick="checkAnswer(14, 'c')">c) Katy Perry</button></li>
+            </ul>
+            <p id="feedback14" class="feedback"></p>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="question">
+            <p>15. An acclaimed actor known for his roles in major films:</p>
+            <ul class="options" id="q15">
+                <li><button onclick="checkAnswer(15, 'a')">a) Tom Welling</button></li>
+                <li><button onclick="checkAnswer(15, 'b')">b) Leonardo DiCaprio</button></li>
+                <li><button onclick="checkAnswer(15, 'c')">c) Charlie Sheen</button></li>
+            </ul>
+            <p id="feedback15" class="feedback"></p>
+        </div>
+
+        <!-- Question 16 -->
+        <div class="question">
+            <p>16. A renowned actor known for his roles and humanitarian work:</p>
+            <ul class="options" id="q16">
+                <li><button onclick="checkAnswer(16, 'a')">a) Brad Pitt</button></li>
+                <li><button onclick="checkAnswer(16, 'b')">b) Will Smith</button></li>
+                <li><button onclick="checkAnswer(16, 'c')">c) Robert Downey Jr.</button></li>
+            </ul>
+            <p id="feedback16" class="feedback"></p>
+        </div>
+
+        <!-- Question 17 -->
+        <div class="question">
+            <p>17. A multi-talented singer, actress, and dancer:</p>
+            <ul class="options" id="q17">
+                <li><button onclick="checkAnswer(17, 'a')">a) Jennifer Lopez</button></li>
+                <li><button onclick="checkAnswer(17, 'b')">b) Taylor Swift</button></li>
+                <li><button onclick="checkAnswer(17, 'c')">c) Rihanna</button></li>
+            </ul>
+            <p id="feedback17" class="feedback"></p>
+        </div>
+
+        <!-- Question 18 -->
+        <div class="question">
+            <p>18. An actor best known for his role as Iron Man in the Marvel Cinematic Universe:</p>
+            <ul class="options" id="q18">
+                <li><button onclick="checkAnswer(18, 'a')">a) Robert Downey Jr.</button></li>
+                <li><button onclick="checkAnswer(18, 'b')">b) Johnny Depp</button></li>
+                <li><button onclick="checkAnswer(18, 'c')">c) Leonardo DiCaprio</button></li>
+            </ul>
+            <p id="feedback18" class="feedback"></p>
+        </div>
+
+        <!-- Question 19 -->
+        <div class="question">
+            <p>19. An influential rapper known for his impactful lyrics and music:</p>
+            <ul class="options" id="q19">
+                <li><button onclick="checkAnswer(19, 'a')">a) Michael Jackson</button></li>
+                <li><button onclick="checkAnswer(19, 'b')">b) Eminem</button></li>
+                <li><button onclick="checkAnswer(19, 'c')">c) Will Smith</button></li>
+            </ul>
+            <p id="feedback19" class="feedback"></p>
+        </div>
+
+        <!-- Question 20 -->
+        <div class="question">
+            <p>20. A pop singer known for her catchy songs and colorful performances:</p>
+            <ul class="options" id="q20">
+                <li><button onclick="checkAnswer(20, 'a')">a) Cecilia Bartoli</button></li>
+                <li><button onclick="checkAnswer(20, 'b')">b) Courtney LaPlante</button></li>
+                <li><button onclick="checkAnswer(20, 'c')">c) Katy Perry</button></li>
+            </ul>
+            <p id="feedback20" class="feedback"></p>
+        </div>
+
+        <!-- Footer -->
+        <div class="signature">
+            &copy; 2024 Daniel Rojas :: TΣʃ :: | &#9993; <a href="mailto:daniel.rojas.ext@ihbogota.com">daniel.rojas.ext@ihbogota.com</a>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswer(questionNumber, answer) {
+            const correctAnswers = {
+                1: 'a',
+                2: 'a',
+                3: 'a',
+                4: 'a',
+                5: 'b',
+                6: 'a',
+                7: 'a',
+                8: 'a',
+                9: 'a',
+                10: 'c',
+                11: 'a',
+                12: 'a',
+                13: 'a',
+                14: 'a',
+                15: 'b',
+                16: 'a',
+                17: 'a',
+                18: 'a',
+                19: 'b',
+                20: 'c'
+            };
+
+            const feedbackElement = document.getElementById(`feedback${questionNumber}`);
+            if (correctAnswers[questionNumber] === answer) {
+                feedbackElement.textContent = 'Correct!';
+                feedbackElement.style.color = 'green';
+            } else {
+                feedbackElement.textContent = 'Incorrect. Try again.';
+                feedbackElement.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
